@@ -1,0 +1,364 @@
+/* general stuff */
+
+body {
+    background: #000000;
+    color: #bbbbbb;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 1000px) {
+    #page {
+	min-width: 950px;
+    }
+    body {
+	font-size: 20px;
+    }
+    .muse {
+	font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    #page {
+	width: 98%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #page {
+	width: 1050px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #page {
+	width: 1250px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    #page {
+	width: 1750px;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    #page {
+	width: 2250px;
+    }
+}
+
+#page {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page-content {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #c4a000;
+    outline: 0px;	
+}
+
+a:hover {
+    color: #66ff66 !important;
+}
+
+#footer {
+    padding: 1em;
+    text-align: right;
+    font-size: 75%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #d3d7cf;
+}
+
+/* site menu */
+
+#toplogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 2em;
+    padding-right: .5em;
+    color: #c4a000;
+    font-family: monospace;
+}
+
+#logotext {
+    padding-left: 1em;
+    color: #66ff66;
+    font-family: monospace;
+    font-size: 120%;
+}
+
+#siteheader {
+/*    background: #111111;
+    border: 1px solid #333333;
+    border-radius: .2em;*/
+    padding: .0em;
+}
+
+#topbar {
+    background: #181818;
+    box-shadow: inset 0px .8em .1em -.6em rgba(0,0,0,0.8),
+		inset 0px -.8em .1em -.6em rgba(0,0,0,0.8),
+		inset .8em 0 .1em -.6em rgba(0,0,0,0.8),
+    		inset -.8em 0 .1em -.6em rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    height: 3em;
+}
+
+#topmenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 1em;
+    height: 75%;
+}
+
+#topmenu a {
+    line-height: 100%;
+    color: #585858;
+    font-weight: 300;
+    font-size: 120%;
+    padding-right: 1em;
+}
+
+#topmenu a:link,
+#topmenu a:visited {
+    text-decoration: none;
+}
+
+#topmenu a:hover {
+    color: #66ff66 !important;
+}
+
+#topmenu a.active {
+    color: #c4a000;
+}
+
+#topmenu a div {
+    padding-left: .5em;
+    padding-right: .5em;
+    vertical-align: middle;
+    display: inline;
+    height: 100%;
+}
+
+#topmenu a span {
+    vertical-align: -5%;
+    display: inline;
+    height: 100%;
+}
+
+#email {
+    padding-right: 1em;
+    color: rgba(255,255,255,.4);
+}
+
+#email span {
+    color: #c4a000;
+    display: inline;
+}
+
+#email div {
+    display: inline;
+    line-height: 2em;
+    vertical-align: .2em;
+}
+
+/* paginator */
+
+#page-bar {
+   color: #585858;
+   display: inline-flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: center;
+   padding-left: 1.5em;
+   padding-right: .5em;
+   margin-top: 2em;
+   background: #181818;
+   box-shadow: inset 0px .8em .1em -.6em rgba(0,0,0,0.8),
+               inset 0px -.8em .1em -.6em rgba(0,0,0,0.8),
+	       inset .8em 0 .1em -.6em rgba(0,0,0,0.8),
+    	       inset -.8em 0 .1em -.6em rgba(0,0,0,0.8);
+
+   border-radius: 1em;
+   height: 3em;
+}
+
+.pagenumber {
+    padding-right: 1em;
+
+}
+.pagenumber a span {
+    vertical-align: -25%;
+}
+
+/* posts / musings */
+
+.muse {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.muse-head {
+    background: #1E1E1E;
+    margin: 0px;
+    padding: 0px;
+    border-bottom-style: solid;
+    border-width: .1em;
+    border-color: #c4a000;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    padding-left: 1em;
+    padding-top: .2em;
+    padding-bottom: .4em;
+    background: #1A1A1A;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+//    height: 2.5em;
+    color: #c4a000;
+}
+
+.muse-head-date {
+    padding: 0px;
+    margin-top: 0.2em;
+    margin-right: 1em;
+    font-size: .8em;
+    color: #888888;
+}
+
+.muse-head h2 {
+    padding: 0px;
+    margin-top: 0.2em;
+    margin-bottom: 0px;
+}
+
+.muse-head h2 a {
+    text-decoration: none;
+}
+
+.muse-content {
+    background: #0F0F0F;
+    padding-left: 1em;
+    padding-top: .1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    margin-top: 0px;
+    border-bottom-style: solid;
+    border-width: .1em;
+    border-color: #c4a000;
+}
+
+.muse-content blockquote {
+    padding-left: .5em;
+//    border-left: solid 0.1em #6666ff;
+    color: #6666ff;
+}
+
+.muse-foot {
+    background: #0f0f0f;
+    margin: 0px;
+    padding: 0px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: .2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: center;
+    height: 1.5em;
+    color: #c4a000;
+    font-size: 80%;
+}
+
+.muse-foot a, .muse-foot span {
+    padding-right: 0.3em;
+}
+
+.highlight pre {
+    overflow-x: auto;
+}
+
+/* muse figure */
+
+.muse-content figure {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.muse-content figure figcaption {
+    font-style: italic;
+    margin-top: 1em;
+}
+
+/* muse tables */
+
+.muse-content table {
+    border-collapse: collapse;
+}
+
+.muse-content table td {
+    padding: .2em;
+}
+
+.muse-content table tr:hover {
+    color: #66ff66;
+}
+
+.muse-content table thead {
+    background: #1e1e1e;
+    color: #c4a000;
+}
+
+.muse-content table tbody tr:nth-child(odd) {
+
+}
+
+.muse-content table tbody tr:nth-child(even) {
+    background: #181818;
+}
+
+/* faq */
+
+
+/* 404 */
+
+#er404, #er404 h2 {
+    background: #000000;
+    color: #dd4444;
+    text-align: center;
+}
